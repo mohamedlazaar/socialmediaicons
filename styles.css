@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 60%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+ul li{
+    background-color: bisque;
+    padding: 13px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer ;
+    
+}
+.instagram{
+    color: rgb(247, 118, 118);
+}
+.youtube{
+    color: red;
+}
+.facebook{
+    color: blue;
+}
+.instagram:hover::before{
+    content:"instagram";
+    
+}
+.facebook:hover::before{
+    content: "facebook";
+}
+.twitter:hover::before{
+    content: "twitter";
+}
+.youtube:hover::before{
+    content: "youtube";
+}
+.github:hover::before{
+    content: "github";
+}
+
+.instagram:hover::before, .facebook:hover::before, .youtube:hover::before,.github:hover::before, .twitter:hover::before{
+    position: absolute;
+    top: -45px;
+    left: -3px;
+    border-radius: 15px;
+    background-color: bisque;
+    padding: 8px 10px;
+    color: black;
+
+}
+.twitter:hover::after, .github:hover::after{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    border-radius: 0 0 100% 100%;
+    width: 20px ;
+    height: 10px;
+    background-color: bisque;
+}
+.instagram:hover::after, .facebook:hover::after, .youtube:hover::after{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    border-radius: 0 0 100% 100%;
+    width: 20px ;
+    height: 10px;
+    background-color: bisque;
+}
+ul li i{
+    margin-top: 50px;
+    font-size: 35px;
+}
